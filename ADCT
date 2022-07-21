@@ -1,0 +1,302 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdeliver.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="fontawesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+            *:focus {
+                outline: none;
+            }
+            .box {
+                margin-top: 20px;
+            }
+        
+            .yes {
+                background: #FFFFFF;
+            }
+        
+            .green {
+                background: #228B22;
+            }
+        
+            .blue {
+                background: #0000ff;
+            }
+        
+            label {
+                margin-right: 15px;
+            }
+           
+        
+            #otherTreatmentDiv,
+            #tellUsMoreDiv,
+            #takingZylontaDiv {
+                display: none;
+            }
+
+            .modal{
+                width:800px;
+                border: 1px solid black;
+            }
+            body {
+                background-color: #f9f8f4;
+            }
+            a{
+                color:#693C5D
+            }
+            .ready {
+                border-bottom: 2px solid #c6007e;   
+                margin-top: 10px;
+            }
+        
+            .p1 {
+                color: #693C5D;
+                font-family: "Lucida Sans Unicode", sans-serif;
+                font-style: normal;
+                font-weight: bold;  
+                text-decoration: none;
+                font-size: 13pt;
+            }
+        
+            .p2 {
+                color: #c6007e;
+                font-family: Verdana, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 9pt;
+                margin-top: 38px;
+            }
+        
+            .p3 {
+                color: #693C5D;
+                font-family: "Lucida Sans Unicode", sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 11pt;
+            }
+            textarea:focus, input:focus{
+                outline: none;
+            }
+            hr {
+                width:50px;
+                margin-left: 65px;
+                margin-top: 0px;
+                border-top: 3px solid #c6007e;
+                border-radius: 100px;
+            }
+            .caution{
+                font-size: medium;
+            }
+
+            .dropdown-values{
+                width: 500px;
+                height: 30px;
+                padding-left: 10px;
+                border: 1px solid black;  
+                cursor:pointer; 
+                border-radius: 100px;
+            }            
+
+            input[name="lovedOnes"], input[name="optedZylonta"], input[name="otherTreatment"], input[name="tellUsMore"], input[name="takingZylonta"] {
+                accent-color: #c6007e;
+            }
+
+            .submit{
+                width:150px;
+                height: 30px;
+                padding: 5px 5px 5px 5px;
+                color: #fff;
+                font-weight: bold;
+                background-color: rgb(219, 109, 194);
+                border: 2px solid rgb(219, 109, 194);
+                border-radius: 50px;
+                cursor: pointer;
+            }
+
+            .register-form{
+               width: 550px;
+               height:250px;
+               margin-left: 100px;
+               font-family: Verdana, sans-serif;
+            }
+
+            .firstName, .LastName, .Email,.phone {
+                width:500px;
+                padding:8px 0px 8px 40px ;
+                margin-bottom: 10px;
+                border: 1px solid ;
+                outline: none;
+                border-radius: 50px;
+            }
+
+            .register-form i{
+                position: absolute;
+                font-size: 18px;
+                margin-top: 7px;
+                margin-left: 10px;
+                border-right: 1px solid black;
+                padding-right: 4px;
+                color: #c6007e;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="modal">
+            <div class="modal-container">
+                <div class="py-5" style="margin-left: 2%;">
+                    <p class="p1" style="padding-top: 2pt;
+                        padding-bottom:0;
+                        padding-left: 49pt;
+                        text-indent: 0pt;
+                        text-align: left;
+                        width:300px">Ready to sign up? Fill in your <span class="ready">inform</span>ation below*</p>
+                        <!-- <hr> -->
+                </div>
+                <div class="row p3">
+                    <div class="col-md-6 mb-6" style="margin-left: 10%;">
+                        <div class="form-radio" >
+                            <h5 class="mb-3 p1">Are you a patient or a caregiver?</h5>
+                            <label><input type="radio" name="optedZylonta" class="optedZylonta" value="yes" checked=""> I’m a caregiver</label><br>
+                            <label><input type="radio" name="optedZylonta" class="optedZylonta" value="no"> I’m a
+                                patient</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p3" id="lovedOnesDiv">
+                    <div class="col-md-6 box mb-3" style="margin-left: 10%;">
+                        <div class="form-radio">
+                            <h5 class="mb-3 p1">Is your loved one currently taking ZYNLONTA®?</h5>
+                            <label><input type="radio" name="lovedOnes" class="lovedOnes" value="yes" checked="">
+                                Yes</label><br>
+                            <label><input type="radio" name="lovedOnes" class="lovedOnes" value="no"> No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p3" id="takingZylontaDiv">
+                    <div class="col-md-6 box mb-3" style="margin-left: 10%;">
+                        <div class="form-radio">
+                            <h5 class="mb-3 p1">Are you currently taking ZYNLONTA®?</h5>
+                            <label><input type="radio" name="takingZylonta" class="takingZylonta" value="yes" checked="">
+                                Yes</label><br>
+                            <label><input type="radio" name="takingZylonta" class="takingZylonta" value="no"> No</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row p3" id="otherTreatmentDiv">
+                    <div class="col-md-6 box" style="margin-left: 65px;">
+                        <div class="form-radio">
+                            <h5 class="mb-3 p1">Are you currently on another treatment?</h5>
+                            <label><input type="radio" name="otherTreatment" class="otherTreatment" value="yes" checked="">
+                                Yes</label><br>
+                            <label><input type="radio" name="otherTreatment" class="otherTreatment" value="no"> No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <h5 class="mb-3 p1" style="margin-left:100px;">How many past treatments for DLBCL have your received?</h5>
+                    <select class="dropdown-values" style="margin-left: 100px; position:relative;">
+                        <option value="none">Select</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3+">3+</option>
+                    </select>
+                </div>
+                <div class="row p3" id="tellUsMoreDiv">
+                    <div class="col-md-6 box" style="margin-left: 100px;">
+                        <div class="form-radio">
+                            <h5 class="mb-3 p1">Tell us more about your DLBCL</h5>
+                            <label><input type="radio" name="tellUsMore" class="tellUsMore"
+                                    value="The cancer came back after past therapies worked (relapsed cancer)" checked=""> The cancer came
+                                back after past therapies worked (relapsed cancer)</label><br>
+                            <label><input type="radio" name="tellUsMore" class="tellUsMore"
+                                    value="Therapies may have never worked or no longer work (refractory cancer)"> Therapies may
+                                have never worked or no longer work (refractory cancer)</label><br>
+                            <label><input type="radio" name="tellUsMore" class="tellUsMore"
+                                    value="Just interested in ZYNLONTA®"> Just interested in ZYNLONTA®</label>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="mb-3 p1" style="margin-left:100px;color:#c6007e;">All fields required unless otherwise noted.</h5>
+                <div class="register-form">
+                    <div class="firstNamefield">
+                        <label for="firstName"> First Name</label>
+                        <div class="fnameArea">
+                            <i class="fa fa-user"></i>
+                            <input type="text" name="firstName" class="firstName" required>
+                        </div>
+                    </div>
+                    <div class="LastNamefield">
+                        <label for="lastName">Last Name</label>
+                        <div class="LNamefield">
+                            <i class="fa fa-user"></i>
+                            <input type="text" name="LastName" class="LastName">
+                        </div>    
+                    </div>
+                    <div class="Phonefield">
+                        <label for="phone">Phone (optional)</label>
+                        <div class="phoneArea">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="text" name="phone" class="phone">
+                        </div>
+                    </div>
+                    <div class="Emailfield">
+                        <label for="Email">Email</label>
+                        <div class="emailArea">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="Email" class="Email">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="policy" style="margin-left: 100px; width:500px; color:black;">
+                <p class="caution" style="font-size: 12px; font-family:sans-serif;">*ADC Therapeutics respects the privacy of your personal information.
+                    Review our <a href=# class="privacy-policy">Privacy Policy</a> for more information. By clicking the Submit Request 
+                    button below, you indicate that you have read, understand, and agree with the <a href=# class="privacy-policy">Privacy Policy</a>
+                    for the information collected in this form.
+                </p>
+                <button class="submit" type="submit" id="pSprtBtn">Send me updates</button>
+            </div>
+        </div>
+    </body>
+</html>
